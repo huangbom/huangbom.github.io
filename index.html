@@ -354,7 +354,7 @@
         
           <p>原文<a href="https://futurestud.io/tutorials/retrofit-2-creating-a-sustainable-android-client" target="_blank" rel="external">https://futurestud.io/tutorials/retrofit-2-creating-a-sustainable-android-client</a></p>
 <p>Retrofit 提供了广泛的功能，有很多可能的配置。很多大型应用程序需要一些特定的设置，例如OAuth认证。为了实现简洁和稳定的项目，我们向您介绍我们的想法：一个可维护的<code>ServiceGenerator</code> Android客户端。</p>
-<h2 id="ServiceGenerator"><a href="#ServiceGenerator" class="headerlink" title="ServiceGenerator"></a>ServiceGenerator</h2><p>正如您知道从{% post_link retrofit-getting-started 开始教程 %}，Retrofit 对象和它的builder是所有请求的核心。在这里您配置您的请求、响应、身份验证、日志记录和错误处理。不幸的是，我们已经看到太多的开发人员只是复制和粘贴这些部分，而不是分离成一个简洁的类。    <code>ServiceGenerator</code>将会给我们一个解决方案，这源于<a href="https://github.com/bkiers/retrofit-oauth/tree/master/src/main/java/nl/bigo/retrofitoauth" target="_blank" rel="external">Bart Kiers的想法</a>。</p>
+<h2 id="ServiceGenerator"><a href="#ServiceGenerator" class="headerlink" title="ServiceGenerator"></a>ServiceGenerator</h2><p>正如您知道{% post_link retrofit-getting-started 开始教程 %}，Retrofit 对象和它的builder是所有请求的核心。在这里您配置您的请求、响应、身份验证、日志记录和错误处理。不幸的是，我们已经看到太多的开发人员只是复制和粘贴这些部分，而不是分离成一个简洁的类。    <code>ServiceGenerator</code>将会给我们一个解决方案，这源于<a href="https://github.com/bkiers/retrofit-oauth/tree/master/src/main/java/nl/bigo/retrofitoauth" target="_blank" rel="external">Bart Kiers的想法</a>。</p>
 <p>让我们从简单的代码开始。在当前状态下，它只定义了一个方法来创建一个给定的class/interface REST客户端，从接口返回一个service类。</p>
           <!--noindex-->
           <div class="post-button text-center">
