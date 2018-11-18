@@ -95,9 +95,9 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="App 与 HTML5 的交互">
 <meta property="og:url" content="http://yoursite.com/2017/05/06/app-interactive-with-html5/index.html">
-<meta property="og:site_name" content="立秋">
+<meta property="og:site_name" content="方寸之间">
 <meta property="og:description" content="App 与 HTML5 的交互，是一个可以大做文章的话题。有的团队直接使用 PhoneGap 来 实现交互的功能，而我则认为 PhoneGap 太重了。我们完全可以把这些交互操作在底层封装好，然后给开发人员使用。">
-<meta property="og:updated_time" content="2017-05-22T06:25:02.000Z">
+<meta property="og:updated_time" content="2018-11-18T03:06:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="App 与 HTML5 的交互">
 <meta name="twitter:description" content="App 与 HTML5 的交互，是一个可以大做文章的话题。有的团队直接使用 PhoneGap 来 实现交互的功能，而我则认为 PhoneGap 太重了。我们完全可以把这些交互操作在底层封装好，然后给开发人员使用。">
@@ -109,7 +109,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -134,7 +134,7 @@
 
 
 
-  <title>App 与 HTML5 的交互 | 立秋</title>
+  <title>App 与 HTML5 的交互 | 方寸之间</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -170,7 +170,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">立秋</span>
+        <span class="site-title">方寸之间</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -266,13 +266,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/06/app-interactive-with-html5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="立秋">
+      <meta itemprop="name" content="方寸之间">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="立秋">
+      <meta itemprop="name" content="方寸之间">
     </span>
 
     
@@ -356,7 +356,7 @@
         <h1 id="App-与-HTML5-的交互"><a href="#App-与-HTML5-的交互" class="headerlink" title="App 与 HTML5 的交互"></a>App 与 HTML5 的交互</h1><h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">onclick</span>=<span class="string">"baobao.callAndroidMethod(100,100,'ccc',true)"</span>&gt;</span> CallAndroidMethod<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><p>创建一个 <code>JSInterface1</code> 类，包括 <code>callAndroidMethod</code> 方法的实现:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">JSInteface1</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">callAndroidMethod</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">float</span> b,String c, <span class="keyword">boolean</span> d)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span> (d) &#123;</div><div class="line">	    String strMessage = <span class="string">"-"</span> + (a + <span class="number">1</span>) + <span class="string">"-"</span> + (b + <span class="number">1</span>) + <span class="string">"-"</span> + c + <span class="string">"-"</span> + d;</div><div class="line">	    <span class="keyword">new</span> AlertDialog.Builder(MainActivity.<span class="keyword">this</span>)</div><div class="line">		.setTitle(<span class="string">"title"</span>)</div><div class="line">		.setMessage(strMessage)</div><div class="line">		.show();</div><div class="line">	&#125; </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>同时，需要注册 baobao 和 JSInterface1 的对应关系:</p>
+<p>/Users/huangyaoshi/Documents/hexo<br>同时，需要注册 baobao 和 JSInterface1 的对应关系:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wvAds.addJavascriptInterface(new JSInteface1(), &quot;baobao&quot;);</div></pre></td></tr></table></figure>
 <h2 id="App-和-HTML5-之间定义跳转协议"><a href="#App-和-HTML5-之间定义跳转协议" class="headerlink" title="App 和 HTML5 之间定义跳转协议"></a>App 和 HTML5 之间定义跳转协议</h2><p>根据上面的例子，运营团队就找到了在 App 中搞活动的解决方案。不必等到 App 每次 发新版才能看到新的活动页面，而是每次做一个 HTML5 的活动页面，然后通过 MobileAPI 把这个 HTML5 页面的地址告诉 App，由 App 加载这个 HTML5 页面即可。<br>在这个 HTML5 页面中，我们可以定义各种 JavaScript 点击事件，从而跳转回 App 的任 意 Native 页面。<br>为此，HTML5 团队需要事先和 App 团队约定好一个格式，例如:</p>
 <ul>
@@ -468,6 +468,8 @@
           
   <div class="comments" id="comments">
     
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTEwOC8xNzYzMw=="></div>
+    
   </div>
 
 
@@ -503,10 +505,10 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
-               alt="立秋" />
-          <p class="site-author-name" itemprop="name">立秋</p>
+               alt="方寸之间" />
+          <p class="site-author-name" itemprop="name">方寸之间</p>
            
-              <p class="site-description motion-element" itemprop="description">为天地立心，为生民立命，为往圣继绝学，为万世开太平。</p>
+              <p class="site-description motion-element" itemprop="description">天地有大美而不言，四时有明法而不议，万物有成理而不说。</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -605,11 +607,11 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">立秋</span>
+  <span class="author" itemprop="copyrightHolder">方寸之间</span>
 </div>
 
 
@@ -739,6 +741,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
